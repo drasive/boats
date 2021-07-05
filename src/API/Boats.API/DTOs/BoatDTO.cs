@@ -2,7 +2,7 @@
 
 namespace Boats.API.DTOs
 {
-    public class BoatResponseDTO
+    public class BoatDTO
     {
         public Guid Id { get; set; }
         public string Name { get; set; }

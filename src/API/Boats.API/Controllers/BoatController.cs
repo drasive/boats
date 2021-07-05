@@ -22,10 +22,10 @@ namespace Boats.API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<BoatResponseDTO>>> Get()
+        public async Task<ActionResult<IEnumerable<BoatDTO>>> Get()
         {
             var boats = (await _boatService.GetAsync()).OrderBy(x => x.Name).ToList();
-            var boatDTOs = _mapper.Map<IEnumerable<BoatResponseDTO>>(boats);
+            var boatDTOs = _mapper.Map<IEnumerable<BoatDTO>>(boats);
 
             return Ok(boatDTOs);
         }
