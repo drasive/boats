@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Boats.API.DTOs;
-using Boats.API.Services.Contract;
+using Boats.Services.Contract;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;

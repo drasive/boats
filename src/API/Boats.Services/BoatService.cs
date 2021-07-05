@@ -1,6 +1,6 @@
-﻿using Boats.API.Services.Contract;
-using Boats.Data.Contract.Entities;
+﻿using Boats.Data.Contract.Entities;
 using Boats.Data.Contract.Repositories;
+using Boats.Services.Contract;
 using System.Linq;
 using System.Threading.Tasks;
 

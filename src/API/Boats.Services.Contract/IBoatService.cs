@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Boats.API.Services.Contract
+namespace Boats.Services.Contract
 {
     public interface IBoatService
     {
