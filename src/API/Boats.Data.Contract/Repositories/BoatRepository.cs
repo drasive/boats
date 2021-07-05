@@ -5,6 +5,6 @@ namespace Boats.Data.Contract.Repositories
 {
     public interface IBoatRepository
     {
-        IQueryable<Boat> GetAsync();
+        IQueryable<Boat> Get();
     }
 }

@@ -2,6 +2,7 @@
 using Boats.Data.Contract.Entities;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Boats.API.Controllers
@@ -20,7 +21,7 @@ namespace Boats.API.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Boat>>> Get()
         {
-            var boats = await _boatService.GetAsync();
+            var boats = (await _boatService.GetAsync()).OrderBy(x => x.Name);
             return Ok(boats);
         }
     }
