@@ -24,8 +24,4 @@
     <ProjectReference Include="..\Boats.Data.Contract\Boats.Data.Contract.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Migrations\" />
-  </ItemGroup>
-
 </Project>

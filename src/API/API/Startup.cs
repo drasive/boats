@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using System.Threading.Tasks;
 
 namespace Boats.API
 {
@@ -44,7 +45,7 @@ namespace Boats.API
             services.AddTransient<IBoatService, BoatService>();
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, BoatsContext boatsContext)
         {
             if (env.IsDevelopment())
             {
@@ -64,6 +65,14 @@ namespace Boats.API
             {
                 endpoints.MapControllers();
             });
+
+            // Setup database
+            boatsContext.Database.Migrate();
+
+            if (env.IsDevelopment())
+            {
+                Seeder.EnsureSeededAsync(boatsContext).Wait();
+            }
         }
     }
 }

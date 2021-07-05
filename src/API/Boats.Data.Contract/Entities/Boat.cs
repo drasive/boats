@@ -6,6 +6,15 @@ namespace Boats.Data.Contract.Entities
 {
     public class Boat
     {
+        // Parameterless constructor for ORM 
+        private Boat() { }
+
+        public Boat(string name, string description)
+        {
+            Name = name;
+            Description = description;
+        }
+
         public Guid Id { get; set; }
 
         [MaxLength(Constants.FieldLenghts.BoatName)]
