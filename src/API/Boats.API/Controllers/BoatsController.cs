@@ -10,12 +10,12 @@ namespace Boats.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class BoatController : ControllerBase
+    public class BoatsController : ControllerBase
     {
         private readonly IBoatService _boatService;
         private readonly IMapper _mapper;
 
-        public BoatController(IBoatService boatService, IMapper mapper)
+        public BoatsController(IBoatService boatService, IMapper mapper)
         {
             _boatService = boatService;
             _mapper = mapper;
