@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Boats.Api.DTOs
+namespace Boats.Api.Dtos
 {
-    public class BoatDTO
+    public class BoatDto
     {
         public Guid Id { get; set; }
         public string Name { get; set; }

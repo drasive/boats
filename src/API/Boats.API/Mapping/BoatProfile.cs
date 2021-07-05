@@ -1,5 +1,5 @@
 ﻿using AutoMapper.Configuration;
-using Boats.Api.DTOs;
+using Boats.Api.Dtos;
 using Boats.Data.Contract.Entities;
 
 namespace Boats.Api.Mapping
@@ -8,7 +8,7 @@ namespace Boats.Api.Mapping
     {
         public BoatProfile()
         {
-            CreateMap<Boat, BoatDTO>();
+            CreateMap<Boat, BoatDto>();
         }
     }
 }
