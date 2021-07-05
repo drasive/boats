@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <Authors>Dimitri Vranken</Authors>
+    <Company />
+    <Product>Boats</Product>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\API.Services.Contract\Boats.Services.Contract.csproj" />
+  </ItemGroup>
+
+</Project>
