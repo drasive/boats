@@ -2,7 +2,7 @@
 Simple webapp for managing boats.
 
 ## Components
-API: ASP.NET Core REST API  running on .NET 5 and using MS SQL as data store.
+API: ASP.NET Core REST API  running on .NET 5 and using MS SQL as data store.  
 Web App: A Vue.js app accessing the API over HTTP.
 
 ## Development Environment
