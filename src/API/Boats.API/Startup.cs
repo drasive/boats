@@ -88,7 +88,7 @@ namespace Boats.Api
 
             if (env.IsDevelopment())
             {
-                Seeder.EnsureSeededAsync(boatsContext).Wait();
+                Seeder.EnsureSeededAsync(boatsContext, 15).Wait();
             }
         }
     }

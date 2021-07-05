@@ -6,13 +6,16 @@ namespace Boats.Data
 {
     public static class Seeder
     {
-        public static async Task EnsureSeededAsync(BoatsContext boatsContext)
+        public static async Task EnsureSeededAsync(BoatsContext boatsContext, int boatCount)
         {
             if (!boatsContext.Boats.Any())
             {
-                for (int i = 0; i < 50; i++)
+                for (int i = 0; i < boatCount; i++)
                 {
-                    var boat = new Boat($"Boat {i + 1}", string.Empty);
+                    var numberString = i + 1 < 10
+                        ? $"0{i + 1}"
+                        : $"{i + 1}";
+                    var boat = new Boat($"Boat {numberString}", string.Empty);
                     boatsContext.Add(boat);
                 }
 
