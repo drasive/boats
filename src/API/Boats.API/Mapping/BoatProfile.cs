@@ -1,8 +1,8 @@
 ﻿using AutoMapper.Configuration;
-using Boats.API.DTOs;
+using Boats.Api.DTOs;
 using Boats.Data.Contract.Entities;
 
-namespace Boats.API.Mapping
+namespace Boats.Api.Mapping
 {
     public class BoatProfile : MapperConfigurationExpression
     {

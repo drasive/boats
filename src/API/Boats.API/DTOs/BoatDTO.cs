@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Boats.API.DTOs
+namespace Boats.Api.DTOs
 {
     public class BoatDTO
     {

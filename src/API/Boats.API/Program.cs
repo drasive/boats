@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace Boats.API
+namespace Boats.Api
 {
     public class Program
     {

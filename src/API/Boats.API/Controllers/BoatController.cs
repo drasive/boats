@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
-using Boats.API.DTOs;
+using Boats.Api.DTOs;
 using Boats.Services.Contract;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Boats.API.Controllers
+namespace Boats.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]

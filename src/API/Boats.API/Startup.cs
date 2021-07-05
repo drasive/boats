@@ -1,4 +1,4 @@
-using Boats.API.Mapping;
+using Boats.Api.Mapping;
 using Boats.Services.Contract;
 using Boats.Data;
 using Boats.Data.Contract.Repositories;
@@ -12,7 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 
-namespace Boats.API
+namespace Boats.Api
 {
     public class Startup
     {

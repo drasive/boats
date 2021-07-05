@@ -1,13 +1,13 @@
 using AutoMapper;
 using AutoMapper.Configuration;
-using Boats.API.Mapping;
+using Boats.Api.Mapping;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using Xunit;
 
-namespace Boats.API.Test
+namespace Boats.Api.Test
 {
     public class AutoMapperTest
     {
