@@ -1,3 +1,4 @@
+using Boats.API.Mapping;
 using Boats.API.Services.Contract;
 using Boats.Data;
 using Boats.Data.Contract.Repositories;
@@ -33,6 +34,8 @@ namespace Boats.API
             {
                 options.SwaggerDoc("v1", new OpenApiInfo { Title = "Boats", Version = "v1" });
             });
+
+            services.AddAutoMapper(typeof(BoatProfile));
 
             // Data
             services.AddTransient<IBoatRepository, BoatRepository>();
