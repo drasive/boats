@@ -8,7 +8,7 @@ namespace Boats.API.Mapping
     {
         public BoatProfile()
         {
-            CreateMap<Boat, BoatDTO>();
+            CreateMap<Boat, BoatResponseDTO>();
         }
     }
 }

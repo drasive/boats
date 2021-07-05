@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using Boats.API.DTOs;
 using Boats.API.Services.Contract;
-using Boats.Data.Contract.Entities;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,10 +22,10 @@ namespace Boats.API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Boat>>> Get()
+        public async Task<ActionResult<IEnumerable<BoatResponseDTO>>> Get()
         {
             var boats = (await _boatService.GetAsync()).OrderBy(x => x.Name).ToList();
-            var boatDTOs = _mapper.Map<IEnumerable<BoatDTO>>(boats);
+            var boatDTOs = _mapper.Map<IEnumerable<BoatResponseDTO>>(boats);
 
             return Ok(boatDTOs);
         }
