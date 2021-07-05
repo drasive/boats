@@ -16,6 +16,8 @@ namespace Boats.Api
 {
     public class Startup
     {
+        private const string CORS_POLICY_DEFAULT = "CorsPolicyDefault";
+
         private readonly IConfiguration _configuration;
 
         public Startup(IConfiguration configuration)
@@ -33,6 +35,21 @@ namespace Boats.Api
             services.AddSwaggerGen(options =>
             {
                 options.SwaggerDoc("v1", new OpenApiInfo { Title = "Boats", Version = "v1" });
+            });
+
+            // TODO: Use more restrictive policy. Clients as of 2021-05-07: localhost
+            services.AddCors(options =>
+            {
+                var corsOrigin = _configuration.GetValue<string>("CorsOrigin");
+                if (string.IsNullOrWhiteSpace(corsOrigin))
+                {
+                    return;
+                }
+
+                options.AddPolicy(
+                    CORS_POLICY_DEFAULT,
+                    builder => builder.WithOrigins(corsOrigin).AllowAnyMethod()
+                );
             });
 
             services.AddAutoMapper(typeof(BoatProfile));
@@ -58,6 +75,7 @@ namespace Boats.Api
             }
 
             app.UseHttpsRedirection();
+            app.UseCors(CORS_POLICY_DEFAULT);
             app.UseRouting();
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>
